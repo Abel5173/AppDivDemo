@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToggleService } from '../toggle.service';
 
 
 @Component({
@@ -10,5 +11,13 @@ export class NavbarComponent {
 
   public myIcon = 'fa-coffee';
 
+  constructor(public togleservice:ToggleService){}  
+
+ 
+  togglesidebar(){
+
+
+    this.togleservice.toggle()
+  }
 
 }
