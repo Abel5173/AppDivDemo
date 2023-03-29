@@ -28,6 +28,8 @@
               "src/styles.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
+           
+            
             "scripts": []
           },
           "configurations": {
@@ -89,6 +91,7 @@
             ],
             "styles": [
               "src/styles.css"
+              
             ],
             "scripts": []
           }
@@ -97,6 +100,8 @@
     }
   },
   "cli": {
-    "analytics": "469e0871-1f8c-42e0-9043-063ff2a95bf7"
+
+    "analytics": false
+
   }
 }
