@@ -1,8 +1,10 @@
-<nav class="bg-white p-1.5">
+<nav class="bg-white p-1.5" [ngClass]="{'pl-56' :  ! this.togleservice.open}">
       <div class="flex items-center justify-between h-16">
           <div class="flex flex-row gap-x-4 justify-center">
+           <button class="right-1.5" (click)="togglesidebar()">
 
-            <i class="fa-solid fa-list py-4"></i>
+             <i class="fa-solid fa-list py-4"></i>
+           </button>
             
             <div class="relative">
              <input type="text" placeholder="Search" class="bg-gray-100 border-2 border-gray-300 rounded-md py-2 px-4 pl-10 block w-full appearance-none leading-normal focus:outline-none focus:bg-white focus:border-gray-400">

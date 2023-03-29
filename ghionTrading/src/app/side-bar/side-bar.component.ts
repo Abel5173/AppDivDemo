@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
+
+  constructor(public toggle: ToggleService){}
+
   dropDown = 'fa fa-angle-up ml-2'
   upArrow = 'fa fa-angle-down ml-2'
   dropdownOpen = false;
@@ -17,5 +21,6 @@ export class SideBarComponent {
   paytoggleDropdown(){
     this.PaydropdownOpen = !this.PaydropdownOpen
   }
+
   
 }
