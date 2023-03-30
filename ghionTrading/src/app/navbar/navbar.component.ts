@@ -10,10 +10,7 @@ import { ToggleService } from '../toggle.service';
 export class NavbarComponent {
 
   public myIcon = 'fa-coffee';
-
-  constructor(public togleservice:ToggleService){}  
-
- 
+  constructor(public togleservice:ToggleService){}   
   togglesidebar(){
 
 

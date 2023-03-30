@@ -1,11 +1,11 @@
 aside{
-    @apply p-4 w-2/12 m-3 absolute top-0 left-0
+    @apply p-4 w-2/12 m-3 absolute top-0 left-0 bg-white
 }
 img{
     @apply mb-5
 }
 i{
-    @apply text-2xl mr-4 text-gray-900
+    @apply text-2xl mr-4
 }
 a {
     @apply flex text-gray-700 mb-5 font-semibold text-xl 

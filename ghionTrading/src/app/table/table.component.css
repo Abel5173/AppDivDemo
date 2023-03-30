@@ -1,0 +1,24 @@
+main{
+    @apply bg-white p-0 m-5
+}
+.filebtn{
+    @apply bg-gray-300 mx-2 p-2 rounded-md float-left
+}
+table{
+    @apply table-auto border border-collapse 
+}
+td  {
+    @apply w-32 text-center text-lg p-2 border border-gray-200 
+}
+th  {
+    @apply mt-5 mb-5 w-52 text-xl border p-5 bg-gray-300 font-medium
+}
+a i{
+    @apply border rounded-lg p-2
+}
+.actions{
+    @apply p-2 flex justify-around
+}
+.btn{
+    @apply text-gray-300 border px-3
+}
