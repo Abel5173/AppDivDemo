@@ -1,0 +1,95 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
+})
+export class TableComponent {
+  date = new Date()
+  portHandling = [
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' }, 
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
+ {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' }, 
+  ]
+}
+
+
+==================================================================================
+
+
+
+<main class="mt-5 h-screen">  
+    <div class="flex justify-between p-3">
+        <div class="float-left">
+            <button class="filebtn"> <i class="fa fa-plus"></i> Add</button>
+            <button class="filebtn"> <i class="fa fa-print"></i> Print</button>
+            <button class="filebtn"> <i class="fas fa-file-excel"></i> Export Excell</button>
+        </div>
+        <div class="float-right">
+            <input type="text" placeholder="search" class="bg-gray-100 p-2 rounded-l-md">
+            <button class="bg-gray-100 p-2 rounded-r-md mr-3"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="column chooser" class="bg-gray-100 p-2 rounded-l-md">
+            <button class="bg-gray-100 p-2 rounded-r-md"><i class="fa fa-caret-down"></i></button>
+        </div>
+    </div>
+    <table style="border-color: black;">
+        <tr>
+            <th>Operation ID <i class="fa fa-filter"></i></th>
+            <th>Type <i class="fa fa-filter"></i></th>
+            <th>Method <i class="fa fa-filter"></i></th>
+            <th>Date <i class="fa fa-filter"></i></th>
+            <th>Shiping Agent <i class="fa fa-filter"></i></th>
+            <th>Amount <i class="fa fa-filter"></i></th>
+            <th>Actions</th>
+        </tr>
+            <tr class="w-32" *ngFor="let port of portHandling">
+                <td>
+                    {{port.ID}}
+                </td>
+                <td>
+                    {{port.Storage}}
+                </td>
+                <td>
+                    {{port.Cash}}
+                </td>
+                <td>
+                    {{port.date | date: 'M/d/yy'}}
+                </td>
+                <td>
+                    {{port.shipingAgent}}
+                </td>
+                <td>
+                    {{port.Amount}}
+                </td>
+                <td>
+                    <div class="actions">
+                        <a href="#"><i class="fas fa-pen "></i></a> <a href="#"><i class="fas fa-trash "></i></a> <a href="#"><i class="fas fa-eye "></i></a>
+                    </div>
+                </td>
+            </tr>
+    </table>
+    <hr class="m-5 border-2 border-gray-300">
+    <footer class="mx-5 flex justify-between ">
+        <div class="pagination mb-4 flex justify-around">
+            <button class="btn rounded-l-md"><i class="fa fa-angle-double-left"></i></button>
+            <button class="btn"><i class="fa fa-angle-left"></i></button>
+            <p class="bg-gray-300 flex pt-2 px-3 font-medium">1</p>
+            <button class="btn"><i class="fa fa-angle-right"></i></button>
+            <button class="btn rounded-r-md mr-3"><i class="fa fa-angle-double-right"></i></button>
+            <input type="text" placeholder="200" class="w-12 bg-gray-100 p-2 rounded-l-md">
+            <button class="bg-gray-100 p-2 rounded-r-md mr-3"><i class="fa fa-search"></i></button>
+            <p class="pt-2 font-medium">200 Items per Page </p>
+        </div>
+        <div class="mb-4 pt-2">
+            <p>1 of 1 pages (6 items)</p>
+        </div>
+    </footer>
+</main>
