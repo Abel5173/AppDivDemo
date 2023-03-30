@@ -1,8 +1,9 @@
 aside{
+    @apply inline-block max-w-xs
     /* @apply p-4 w-auto  bg-white h-screen absolute top-0 left-0 bg-white */
 }
 img{
-    @apply mb-5
+    @apply mb-5 inline-block max-w-xs
 }
 i{
     @apply text-2xl mr-4
@@ -14,7 +15,7 @@ p{
     @apply float-left 
 }
 section{
-    @apply flex flex-col justify-between flex-wrap inline-block max-w-xs"
+    @apply flex flex-col justify-between flex-wrap inline-block max-w-xs
 }
 
 /* .toggled{
