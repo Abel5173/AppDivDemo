@@ -1,5 +1,5 @@
 aside{
-    @apply p-4 w-2/12 m-3 absolute top-0 left-0 bg-white
+    /* @apply p-4 w-auto  bg-white h-screen absolute top-0 left-0 bg-white */
 }
 img{
     @apply mb-5
@@ -14,13 +14,13 @@ p{
     @apply float-left 
 }
 section{
-    @apply flex flex-col justify-between flex-wrap 
+    @apply flex flex-col justify-between flex-wrap inline-block max-w-xs"
 }
 
-.toggled{
+/* .toggled{
 
     display: none;
     position: absolute;
     top: 0;
     right: 0;
-}
+} */
