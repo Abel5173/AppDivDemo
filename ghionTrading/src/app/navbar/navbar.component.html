@@ -1,40 +1,43 @@
-<nav class="bg-white p-1.5" [ngClass]="{'pl-56' :  ! this.togleservice.open}">
-      <div class="flex items-center justify-between h-16">
-          <div class="flex flex-row gap-x-4 justify-center">
-           <button class="right-1.5" (click)="togglesidebar()">
+<nav class="bg-white flex justify-between h-16 p-4">
+  <ul class="flex gap-x-4 p-4">
+    <li>
+      <button class="right-1.5" (click)="togglesidebar()">
+        <div class="bg-gray-500 my-1 h-1 w-7"></div>
+        <div class="bg-gray-500 my-1 h-1 w-7"></div>
+        <div class="bg-gray-500 my-1 h-1 w-7"></div>
+      </button>
+    </li>
+    <li>
+      <input
+        type="text"
+        placeholder="search"
+        class="bg-gray-100 p-2 rounded-l-md"
+      />
+      <button class="bg-gray-100 p-2 rounded-r-md mr-3">
+        <i class="fa fa-search text-gray-600"></i>
+      </button>
+    </li>
+  </ul>
 
-             <i class="fa-solid fa-list py-4"></i>
-           </button>
-            
-            <div class="relative">
-             <input type="text" placeholder="Search" class="bg-gray-100 border-2 border-gray-300 rounded-md py-2 px-4 pl-10 block w-full appearance-none leading-normal focus:outline-none focus:bg-white focus:border-gray-400">
-             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-               <i class="fas fa-search text-gray-400"></i>
-             </div>
-           </div>
-          </div>
-          
-            <div class="flex flex-row justify-between gap-x-4">
-              <div>
-                <img src="./Avater.jpeg" alt="avatar" class="rounded-full h-12 w-12">
-              </div>
-              <div><i class="fa-regular fa-bell"></i></div>
-              <div>
-                <select name="" id="">
-                   <option value="">Admin</option>
-                   <option value="">User</option>
-                   <option value="">Gust</option>
-                </select>
-              </div>
-
-              <div>
-                <i class="fa-light fa-messages"></i>
-              </div>
-            </div>
-          </div>
-        
-  
-  
-  </nav>
-
-  
+  <ul class="flex gap-x-4 ">
+    <li>
+      <img
+        src="https://picsum.photos/200/301"
+        class="rounded-full h-14 w-14"
+        alt=""
+      />
+    </li>
+    <li>
+      <button class="bg-gray-100 p-2 rounded-md text-gray-400 font-semibold">admin    <i class="fa fa-caret-down"></i></button>
+    </li>
+    <li>
+      <i class="far fa-bell text-3xl text-gray-400"></i>
+    </li>
+    <li>
+      <i class="fa fa-envelope text-3xl text-gray-400"></i>
+    </li>
+    <li>
+      <button class="border-2 w-20 pl-1 text-left rounded-md text-gray-900 font-normal">amh    <i class="fa fa-caret-down"></i></button>
+    </li>
+  </ul>
+</nav>

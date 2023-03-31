@@ -1,5 +1,13 @@
-<div class="inline-block grid bg-gray-100">
-    <app-side-bar class="row-span-full colo-start-1 inline-block max-w-xs"></app-side-bar>
-    <app-navbar class="col-start-2 colo-span-full"></app-navbar>
-    <app-table></app-table>
+<div *ngIf="!form" class="inline-grid auto-cols-auto gap-5 w-screen" >
+  <div *ngIf = "toggle" class="row-span-3 col-start-1 inline-block max-w-xs" >
+    <app-side-bar class="h-screen"></app-side-bar>
+  </div>
+  <div *ngIf = "form" >
+    <app-form-control [class]="toggle? 'row-start-2 col-start-2 col-span-2': ''"></app-form-control>
+  </div>
+  <app-navbar (buttonClick)="handleClick()" [class]="toggle? 'row-start-1 col-start-2 col-span-2 h-16': ''" ></app-navbar>
+  <div *ngIf = "!form" >
+    <app-table (addClicked)="addForm()" [class]="toggle? 'row-start-2 col-start-2 col-span-2': ''"></app-table>
+  </div>
 </div>
+

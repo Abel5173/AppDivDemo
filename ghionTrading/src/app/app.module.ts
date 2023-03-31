@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { TableComponent } from './table/table.component';
+import { FormControlComponent } from './form-control/form-control.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SideBarComponent,
-    TableComponent
+    TableComponent,
+    FormControlComponent
   ],
   imports: [
     BrowserModule

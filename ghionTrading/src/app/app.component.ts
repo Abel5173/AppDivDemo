@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ghionTrading';
+  toggle = false
+  form = false
+  handleClick(){
+    this.toggle = !this.toggle
+  }
+
+  addForm(){
+    this.form = !this.form
+  }
 }

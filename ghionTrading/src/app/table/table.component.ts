@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -19,4 +19,10 @@ export class TableComponent {
  {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
  {ID: 'IMP22001', Storage:'DO', Cash: 'cash', date: this.date, shipingAgent:'sample agent',Amount:'5568.99' },
   ]
+
+  @Output() addClicked: EventEmitter<void> = new EventEmitter()
+
+  addBtn(){
+    this.addClicked.emit()
+  }
 }

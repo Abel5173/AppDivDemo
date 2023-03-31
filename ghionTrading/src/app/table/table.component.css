@@ -1,11 +1,9 @@
-main{
-    @apply bg-white p-0 m-5
-}
+
 .filebtn{
     @apply bg-gray-300 mx-2 p-2 rounded-md float-left
 }
 table{
-    @apply table-auto border border-collapse 
+    @apply table-auto border border-collapse bg-white 
 }
 td  {
     @apply w-32 text-center text-lg p-2 border border-gray-200 
