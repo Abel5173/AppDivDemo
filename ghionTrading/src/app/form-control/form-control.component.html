@@ -1,0 +1,80 @@
+<main class="flex flex-col p-8 bg-gray-100 gap-y-5">
+    <div class="">
+      <h1 class="font-medium my-3 text-4xl">Shiping Agent Payment</h1>
+    </div>
+    <div class="bg-white p-5 h-full">
+        <div class="flex h-24 bg-gray-300 rounded-lg ">
+            <div class="bg-black w-10 rounded-l-lg"></div>
+            <h1 class="text-center text-3xl p-8 font-medium">Basic Information</h1>
+        </div>
+        <div class="inline-grid py-5 m-8 font-mono text-2xl font-normal w-full grid-cols-3 gap-x-10 gap-y-16 grid-rows-3 grid-cols-auto-fill ">
+            <div class="flex flex-col gap-y-3">
+                <label for="operation">Operation</label>
+                <select required class="w-96 p-2 rounded-md  bg-white border border-black" name="operation" [(ngModel)]="port.id">
+                    <option value="option1">Option1</option>
+                    <option value="option2">Option2</option>
+                    <option value="option3">Option3</option>
+                    <option value="option4">Option4</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-y-3 ">
+                <label for="type">Type</label>
+                <select required class="w-96 p-2 rounded-md  bg-white border border-black" name="type" [(ngModel)]="port.type">
+                    <option value="option1">Type1</option>
+                    <option value="option2">Type2</option>
+                    <option value="option3">Type3</option>
+                    <option value="option4">Type4</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-y-3 ">
+                <label for="operation">Shipping Agent</label>
+                <select required class="w-96 p-2 rounded-md  bg-white border border-black" name="operation" [(ngModel)]="port.shipingAgent">
+                    <option value="option1">Agent1</option>
+                    <option value="option2">Agent2</option>
+                    <option value="option3">Agent3</option>
+                    <option value="option4">Agent4</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="operation">Payment Date</label>
+                <input required type="date" class="w-96 p-2 rounded-md  bg-white border border-black" name="operation" [(ngModel)]="port.date"> 
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="operation">Payment Method</label>
+                <select required class="w-96 p-2 rounded-md  bg-white border border-black" name="operation" [(ngModel)]="port.method">
+                    <option value="Method1">Method1</option>
+                    <option value="Method2">Method2</option>
+                    <option value="Method3">Method3</option>
+                    <option value="Method4">Method4</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="">Bank Code</label>
+                <input type="text" class="w-96 p-2 rounded-md  bg-white border border-black" name="">
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="">Description</label>
+                <input required type="text" class="w-96 p-2 rounded-md  bg-white border border-black" name="shipingAgent">
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="amount">Amount</label>
+                <input type="text" class="w-96 p-2 rounded-md  bg-white border border-black" name="amount" [(ngModel)]="port.amount">
+            </div>
+            <div class="flex flex-col gap-y-3">
+                <label for="currency">Currency</label>
+                <select required class="w-96 p-2 rounded-md  bg-white border border-black" name="currency" id="">
+                    <option value="option1">Currency1</option>
+                    <option value="option2">Currency2</option>
+                    <option value="option3">Currency3</option>
+                    <option value="option4">Currency4</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex gap-x-24 text-2xl font-medium mx-8 mt-24">
+            <button (click)="submit()" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500">Submit</button>
+            <button (click)="cancleClicked()" class="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-white hover:text-red-500 hover:border hover:border-red-500">Cancel</button>
+        </div>
+    </div>
+    
+  </main>
+  

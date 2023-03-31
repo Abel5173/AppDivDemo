@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ToggleService } from '../toggle.service';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -8,13 +7,11 @@ import { ToggleService } from '../toggle.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  @Output()  buttonClick: EventEmitter<void> = new EventEmitter();
   public myIcon = 'fa-coffee';
-  constructor(public togleservice:ToggleService){}   
+
   togglesidebar(){
-
-
-    this.togleservice.toggle()
+    this.buttonClick.emit();
   }
 
 }

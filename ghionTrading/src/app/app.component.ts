@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ghionTrading';
+  ports: any[] = []
+  toggle = false
+  form = false
+
+  handleClick(){
+    this.toggle = !this.toggle
+  }
+
+  onDataEmitted(data: any) {
+    this.ports.push(data)
+  }
+
+  addForm(){
+    this.form = !this.form
+  }
 }

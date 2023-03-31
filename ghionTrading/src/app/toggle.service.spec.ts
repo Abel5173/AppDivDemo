@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ToggleService } from './toggle.service';
+import { ToggleService } from './data.service';
 
 describe('ToggleService', () => {
   let service: ToggleService;
