@@ -21,4 +21,11 @@ export class TableComponent implements OnInit {
   addBtn() {
     this.addClicked.emit();
   }
+  deleteBtn(i: number){
+    this.ports.splice(i, 1)
+  }
+  editBtn(i: number){
+    console.log(this.ports[i]);
+    
+  }
 }

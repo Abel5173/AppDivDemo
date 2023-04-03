@@ -1,4 +1,5 @@
 <main class="flex flex-col p-8 bg-gray-100 gap-y-5">
+  <div class="w-fit flex flex-col justify-center">
   <div class="">
     <h1 class="font-medium my-3 text-4xl">Shiping Agent Payment</h1>
     <input
@@ -36,8 +37,7 @@
       </button>
     </div>
   </div>
-  <div class="bg-white w-fit flex flex-col justify-center">
-  <div >
+  <div class="bg-white " >
     <table class="w-fit">
       <tr>
         <th>Operation ID <i class="fa fa-filter"></i></th>
@@ -48,60 +48,60 @@
         <th>Amount <i class="fa fa-filter"></i></th>
         <th>Actions</th>
       </tr>
-      <tr class="w-32" *ngFor="let p of ports">
+      <tr class="w-32" *ngFor="let p of ports let i = index">
         <td>
-          {{ p.id }}
+          <input type="text" value="{{ p.id }}" [(ngModel)]="p.id">
         </td>
         <td>
-          {{ p.type }}
+          <input type="text" value="{{ p.type }}" [(ngModel)]="p.type">
         </td>
         <td>
-          {{ p.method }}
+          <input type="text" value=" {{ p.method }}" [(ngModel)]="p.method">
         </td>
         <td>
-          {{ p.date | date : "M/d/yy" }}
+          <input type="date" value="p.date | date : 'M/d/yy'" [(ngModel)]="p.date">
         </td>
         <td>
-          {{ p.shipingAgent }}
+          <input type="text" value="{{ p.shipingAgent }}" [(ngModel)]="p.shipingAgent">
         </td>
         <td>
-          {{ p.amount }}
+          <input type="text" value="{{ p.amount }}" [(ngModel)]="p.amount">
         </td>
         <td>
           <div class="actions">
-            <a href="#"><i class="fas fa-pen"></i></a>
-            <a href="#"><i class="fas fa-trash"></i></a>
+            <a href="#"><i class="fas fa-pen" (click)="editBtn(i)"  ></i></a>
+            <a href="#"><i class="fas fa-trash" (click)="deleteBtn(i)"></i></a>
             <a href="#"><i class="fas fa-eye"></i></a>
           </div>
         </td>
       </tr>
     </table>
-  </div>
-  <hr class="m-5 border-2 border-gray-300" />
-  <footer class="mx-5 bg-white flex justify-between">
-    <div class="pagination mb-4 flex justify-around">
-      <button class="btn rounded-l-md">
-        <i class="fa fa-angle-double-left"></i>
-      </button>
-      <button class="btn"><i class="fa fa-angle-left"></i></button>
-      <p class="bg-gray-300 flex pt-2 px-3 font-medium">1</p>
-      <button class="btn"><i class="fa fa-angle-right"></i></button>
-      <button class="btn rounded-r-md mr-3">
-        <i class="fa fa-angle-double-right"></i>
-      </button>
-      <input
-        type="text"
-        placeholder="200"
-        class="w-12 bg-gray-100 p-2 rounded-l-md"
-      />
-      <button class="bg-gray-100 p-2 rounded-r-md mr-3">
-        <i class="fa fa-search"></i>
-      </button>
-      <p class="pt-2 font-medium">200 Items per Page</p>
+    <hr class="m-5 border-2 border-gray-300" />
+    <footer class="mx-5 bg-white flex justify-between">
+      <div class="pagination mb-4 flex justify-around">
+        <button class="btn rounded-l-md">
+          <i class="fa fa-angle-double-left"></i>
+        </button>
+        <button class="btn"><i class="fa fa-angle-left"></i></button>
+        <p class="bg-gray-300 flex pt-2 px-3 font-medium">1</p>
+        <button class="btn"><i class="fa fa-angle-right"></i></button>
+        <button class="btn rounded-r-md mr-3">
+          <i class="fa fa-angle-double-right"></i>
+        </button>
+        <input
+          type="text"
+          placeholder="200"
+          class="w-12 bg-gray-100 p-2 rounded-l-md"
+        />
+        <button class="bg-gray-100 p-2 rounded-r-md mr-3">
+          <i class="fa fa-search"></i>
+        </button>
+        <p class="pt-2 font-medium">{{ports.length}} Items per Page</p>
+      </div>
+      <div class="mb-4 pt-2">
+        <p>1 of 1 pages (6 items)</p>
+      </div>
+    </footer>
     </div>
-    <div class="mb-4 pt-2">
-      <p>1 of 1 pages (6 items)</p>
-    </div>
-  </footer>
   </div>
 </main>

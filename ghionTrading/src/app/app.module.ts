@@ -7,6 +7,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { TableComponent } from './table/table.component';
 import { FormControlComponent } from './form-control/form-control.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
