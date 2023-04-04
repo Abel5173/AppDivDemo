@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { FormControlComponent } from './form-control/form-control.component';
+import { RouterModule, Routes } from '@angular/router';
 import { TableComponent } from './table/table.component';
+import { AppComponent } from './app.component';
+import { FormControlComponent } from './form-control/form-control.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 const routes: Routes = [
-  {path: 'form-control-component', component: FormControlComponent},
-  {path: 'table-component', component: TableComponent}
-]
+      {path: '',component: TableComponent},
+      { path: 'form-control', component: FormControlComponent}
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

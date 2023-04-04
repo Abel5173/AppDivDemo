@@ -1,26 +1,10 @@
-<div *ngIf="!form" class="inline-grid auto-cols-auto gap-5 w-screen">
+<div class="inline-grid auto-cols-auto gap-x-5 w-screen">
   <div *ngIf="toggle" class="row-span-3 col-start-1 inline-block max-w-xs">
     <app-side-bar class="h-screen"></app-side-bar>
   </div>
-  <app-navbar
-    (buttonClick)="handleClick()"
-    [class]="toggle ? 'row-start-1 col-start-2 col-span-2 h-16' : ''"
-  ></app-navbar>
-  <app-table [ports]="ports"
-    (addClicked)="addForm()"
-    [class]="toggle ? 'row-start-2 col-start-2 col-span-2' : ''"
-></app-table>
-
-</div>
-<div *ngIf="form" class="inline-grid auto-cols-auto gap-5 w-screen">
-  <div *ngIf="toggle" class="row-span-3 col-start-1 inline-block max-w-xs">
-    <app-side-bar class="h-screen"></app-side-bar>
+  <app-navbar (buttonClick)="handleClick()" [class]="toggle ? 'row-start-1 col-start-2 col-span-2 h-16 mb-7' : 'mb-7'"></app-navbar>
+  <div class="pl-5 bg-gray-100">
+    <h1 class="font-medium my-3 text-4xl">Shiping Agent Payment</h1>
   </div>
-  <app-navbar
-    (buttonClick)="handleClick()"
-    [class]="toggle ? 'row-start-1 col-start-2 col-span-2 h-16' : ''"
-  ></app-navbar>
-  <app-form-control  (cancleBtn)="addForm()" (dataEmitter)="onDataEmitted($event)"
-    [class]="toggle ? 'row-start-2 col-start-2 col-span-2' : ''"
-  ></app-form-control>
+  <router-outlet></router-outlet>
 </div>

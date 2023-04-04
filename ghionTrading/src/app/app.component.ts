@@ -8,17 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   ports: any[] = []
   toggle = false
-  form = false
 
   handleClick(){
     this.toggle = !this.toggle
   }
 
   onDataEmitted(data: any) {
+    console.log(data)
     this.ports.push(data)
-  }
-
-  addForm(){
-    this.form = !this.form
   }
 }
